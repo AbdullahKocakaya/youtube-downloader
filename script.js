@@ -1,11 +1,18 @@
-var convertBtn = document.querySelector('.convert-button');
+var convertBtnMp4 = document.querySelector('.convert-button-mp4');
+var convertBtnMp3 = document.querySelector('.convert-button-mp3');
+
 var URLinput = document.querySelector('.URL-input');
 
-convertBtn.addEventListener('click', () => {
+convertBtnMp4.addEventListener('click', () => {
     console.log(`URL: ${URLinput.value}`);
-    sendURL(URLinput.value);
+    sendURL(URLinput.value, "mp4");
 });
 
-function sendURL(URL) {
-    window.location.href = `http://localhost:4444/download?URL=${URL}`;
+convertBtnMp3.addEventListener('click', () => {
+    console.log(`URL: ${URLinput.value}`);
+    sendURL(URLinput.value, "mp3");
+});
+
+function sendURL(URL, extension) {
+    window.location.href = `http://localhost:4444/download-${extension}?URL=${URL}`;
 }

@@ -5,7 +5,7 @@
     font-family: Arial;
     margin-top:40vh;
 }
-.URL-input, .convert-button {
+.URL-input, .convert-button-mp4, .convert-button-mp3 {
     font-size:1.3em;
     padding:5px 10px;
 }
@@ -20,7 +20,13 @@
 .URL-input:focus {
     border:2px solid #0485ff;
 }
-.convert-button {
+.convert-button-mp4 {
+    border-radius:0px 4px 4px 0px;
+    border:2px solid #0485ff;
+    background: #0485ff;
+    color:white;
+}
+.convert-button-mp3 {
     border-radius:0px 4px 4px 0px;
     border:2px solid #0485ff;
     background: #0485ff;
