@@ -4,6 +4,8 @@ const ytdl      = require('ytdl-core');
 
 const app = express();
 
+app.use(cors());
+
 const port = 4444;
 
 app.listen(port, () => {
