@@ -27,3 +27,11 @@ app.get('/download-mp3', (req, res) => {
     ytdl(URL, { format: 'mp3'})
         .pipe(res);
 });
+
+app.get('/info-title', (req, res) => {
+    var URL = req.query.URL;
+
+    ytdl.getInfo(URL, (err, info) => {
+        console.log(info.player_response.videoDetails.title);
+    });
+});
