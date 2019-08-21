@@ -7,5 +7,5 @@ convertBtn.addEventListener('click', () => {
 });
 
 function sendURL(URL) {
-    // We will put code here later
+    window.location.href = `http://localhost:4444/download?URL=${URL}`;
 }
